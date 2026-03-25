@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0A;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.6; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.15); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .why-grid > div:first-child {
+    position: static !important;
+  }
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .programs-top {
+    grid-template-columns: 1fr !important;
+  }
+  .programs-bottom {
+    grid-template-columns: 1fr !important;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .benefits-grid > div {
+    border-right: none !important;
+  }
+  .trainers-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .pricing-grid > div {
+    transform: scale(1) !important;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .cta-grid > div:last-child {
+    align-items: flex-start !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-grid > div:first-child {
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainers-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(232,255,59,0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(232,255,59,0.5);
+}
+
+/* Selection */
+::selection {
+  background: rgba(232,255,59,0.25);
+  color: #fff;
+}
